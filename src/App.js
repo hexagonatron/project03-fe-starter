@@ -10,8 +10,9 @@ import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import { StoreProvider } from './state/GlobalState';
 import Profile from './pages/Profile';
+import { createUploadLink } from 'apollo-upload-client';
 
-const httpLink = createHttpLink({
+const httpLink = createUploadLink({
   uri: process.env.REACT_APP_BASEURL + '/graphql',
 });
 
